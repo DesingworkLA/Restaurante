@@ -1,52 +1,131 @@
-body {
+/* RESET */
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
 }
 
-.hero {
-  background: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5') center/cover;
-  height: 100vh;
-  color: white;
-}
-
-nav {
+/* NAVBAR */
+.navbar {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
-}
-
-nav a {
+  align-items: center;
+  padding: 20px 60px;
+  position: fixed;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
   color: white;
+}
+
+.navbar nav a {
+  color: white;
+  margin-left: 20px;
   text-decoration: none;
-  margin-left: 15px;
+  font-weight: bold;
 }
 
-.hero-text {
+.logo {
+  font-size: 24px;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1540189549336-e6e99c3679fe")
+    center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  background: rgba(0,0,0,0.6);
+  padding: 40px;
   text-align: center;
-  margin-top: 150px;
+  color: white;
+  border-radius: 10px;
 }
 
+.hero h2 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+/* BUTTON */
 .btn {
   background: #e63946;
   color: white;
-  padding: 12px 20px;
+  padding: 12px 25px;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 25px;
+  font-weight: bold;
 }
 
-.menu, .contacto {
-  padding: 60px;
+/* SECTIONS */
+.about,
+.menu,
+.cta {
+  padding: 80px 60px;
   text-align: center;
 }
 
-.cards {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+.about p {
+  max-width: 700px;
+  margin: 20px auto 0;
+  color: #555;
 }
 
-.card {
-  background: #f1f1f1;
+/* MENU */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.menu-card {
+  background: #f4f4f4;
   padding: 30px;
-  border-radius: 10px;
+  border-radius: 12px;
+}
+
+.menu-card h4 {
+  margin-bottom: 10px;
+}
+
+.menu-card span {
+  color: #e63946;
+  font-weight: bold;
+}
+
+/* CTA */
+.cta {
+  background: #1d3557;
+  color: white;
+}
+
+/* FOOTER */
+footer {
+  background: #111;
+  color: white;
+  padding: 40px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 20px;
+  }
+
+  .hero h2 {
+    font-size: 32px;
+  }
 }
