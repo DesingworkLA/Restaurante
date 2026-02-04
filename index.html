@@ -2,38 +2,74 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Restaurante Demo</title>
-  <link rel="stylesheet" href="restaurante.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurante Demo | LA.Designwork</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="hero">
+<!-- NAVBAR -->
+<header class="navbar">
+  <h1 class="logo">La Cocina</h1>
   <nav>
-    <h1>La Cocina</h1>
     <a href="#menu">Menú</a>
-    <a href="#contacto">Contacto</a>
+    <a href="#about">Nosotros</a>
+    <a href="#contact">Contacto</a>
   </nav>
-  <div class="hero-text">
-    <h2>Sabor que enamora</h2>
-    <p>Comida fresca, hecha con pasión</p>
-    <a class="btn" href="#">Reservar mesa</a>
-  </div>
 </header>
 
-<section class="menu" id="menu">
-  <h3>Nuestro Menú</h3>
-  <div class="cards">
-    <div class="card">🍝 Pasta Artesanal</div>
-    <div class="card">🍕 Pizza Gourmet</div>
-    <div class="card">🥩 Carne Premium</div>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h2>Sabores que se recuerdan</h2>
+    <p>Cocina artesanal con ingredientes frescos</p>
+    <a href="#" class="btn">Reservar mesa</a>
   </div>
 </section>
 
-<section class="contacto" id="contacto">
-  <h3>Visítanos</h3>
-  <p>📍 Centro de la ciudad</p>
-  <a class="btn" href="#">WhatsApp</a>
+<!-- ABOUT -->
+<section class="about" id="about">
+  <h3>Nuestra historia</h3>
+  <p>
+    Somos un restaurante comprometido con la calidad, el sabor auténtico
+    y una experiencia que enamora desde el primer bocado.
+  </p>
 </section>
+
+<!-- MENU -->
+<section class="menu" id="menu">
+  <h3>Platos destacados</h3>
+
+  <div class="menu-grid">
+    <div class="menu-card">
+      <h4>Pasta Artesanal</h4>
+      <span>€12</span>
+    </div>
+
+    <div class="menu-card">
+      <h4>Pizza Gourmet</h4>
+      <span>€14</span>
+    </div>
+
+    <div class="menu-card">
+      <h4>Corte Premium</h4>
+      <span>€18</span>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h3>¿Listo para visitarnos?</h3>
+  <a href="#" class="btn">Escríbenos por WhatsApp</a>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <p>📍 Centro de la ciudad</p>
+  <p>📞 +34 600 000 000</p>
+  <p>© 2026 La Cocina — Diseñado por LA.Designwork</p>
+</footer>
 
 </body>
 </html>
