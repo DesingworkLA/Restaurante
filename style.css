@@ -110,8 +110,10 @@
   padding: 100px 60px;
 
   display: flex;
-  align-items: center;
-  gap: 40px; /* 👈 espacio entre los textos */
+  flex-direction: column; /* 👈 uno debajo del otro */
+  align-items: center;    /* 👈 centrados horizontalmente */
+  text-align: center;
+  gap: 24px;              /* 👈 espacio entre textos */
 }
 
 /* FOOTER */
