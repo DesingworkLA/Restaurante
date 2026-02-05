@@ -30,6 +30,7 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
 }
 
 .logo {
@@ -45,6 +46,17 @@
   color: white;
   text-decoration: none;
   font-weight: bold;
+}
+
+/* Botón hamburguesa oculto en escritorio */
+.nav-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-left: 15px;
 }
 
 /* =======================
@@ -156,18 +168,40 @@ footer {
 
   /* Navbar móvil */
   .navbar {
-    padding: 20px 20px;
+    padding: 15px 20px;
   }
 
   .navbar-container {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
   }
 
+  /* Mostrar botón hamburguesa */
+  .nav-toggle {
+    display: block;
+  }
+
+  /* Menú oculto por defecto en móvil */
   .nav-links {
+    position: absolute;
+    top: 60px; /* justo debajo de la navbar */
+    right: 0;
+    background: rgba(0,0,0,0.9);
     flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
+    align-items: center;
+    width: 200px;
+    padding: 15px;
+    gap: 15px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    border-radius: 0 0 10px 10px;
+    z-index: 999;
+  }
+
+  /* Mostrar menú al activar */
+  .nav-links.active {
+    transform: translateX(0);
   }
 
   /* Hero móvil */
