@@ -104,11 +104,14 @@
   font-weight: bold;
 }
 
-/* CTA */
 .cta {
   background: #1d3557;
   color: white;
   padding: 100px 60px;
+
+  display: flex;
+  align-items: center;
+  gap: 40px; /* 👈 espacio entre los textos */
 }
 
 /* FOOTER */
