@@ -131,18 +131,29 @@ footer {
     padding: 20px;
   }
 
-  <!-- NAVBAR -->
-<header class="navbar">
-  <div class="navbar-container">
-    <h1 class="logo">La Cocina</h1>
-    <nav class="nav-links">
-      <a href="#menu">Menú</a>
-      <a href="#about">Nosotros</a>
-      <a href="#contact">Contacto</a>
-    </nav>
-  </div>
-</header>
-  .hero h2 {
-    font-size: 32px;
+
+  .navbar-container {
+  display: flex;
+  align-items: center;       /* centra verticalmente logo y links */
+  justify-content: space-between; /* separa logo y links */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;             /* espacio entre links */
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column; /* apila logo y links en móvil */
+    align-items: center;
+  }
+
+  .nav-links {
+    gap: 1rem;
+    margin-top: 0.5rem;
   }
 }
