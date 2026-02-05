@@ -131,6 +131,17 @@ footer {
     padding: 20px;
   }
 
+  <!-- NAVBAR -->
+<header class="navbar">
+  <div class="navbar-container">
+    <h1 class="logo">La Cocina</h1>
+    <nav class="nav-links">
+      <a href="#menu">Menú</a>
+      <a href="#about">Nosotros</a>
+      <a href="#contact">Contacto</a>
+    </nav>
+  </div>
+</header>
   .hero h2 {
     font-size: 32px;
   }
