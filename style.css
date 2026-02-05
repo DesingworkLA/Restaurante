@@ -1,4 +1,6 @@
-/* RESET */
+/* =======================
+   RESET
+======================= */
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +8,9 @@
   font-family: 'Arial', sans-serif;
 }
 
-/* NAVBAR */
+/* =======================
+   NAVBAR
+======================= */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -16,20 +20,36 @@
   width: 100%;
   background: rgba(0,0,0,0.6);
   color: white;
+  z-index: 1000;
 }
 
-.navbar nav a {
-  color: white;
-  margin-left: 20px;
-  text-decoration: none;
-  font-weight: bold;
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .logo {
   font-size: 24px;
 }
 
-/* HERO */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* =======================
+   HERO
+======================= */
 .hero {
   height: 100vh;
   background: url("https://images.unsplash.com/photo-1540189549336-e6e99c3679fe")
@@ -53,11 +73,13 @@
 }
 
 .hero p {
-  margin-bottom: 20px;
   font-size: 18px;
+  margin-bottom: 20px;
 }
 
-/* BUTTON */
+/* =======================
+   BUTTON
+======================= */
 .btn {
   background: #e63946;
   color: white;
@@ -67,7 +89,9 @@
   font-weight: bold;
 }
 
-/* SECTIONS */
+/* =======================
+   SECTIONS
+======================= */
 .about,
 .menu,
 .cta {
@@ -104,16 +128,16 @@
   font-weight: bold;
 }
 
+/* CTA */
 .cta {
   background: #1d3557;
   color: white;
   padding: 100px 60px;
-
   display: flex;
-  flex-direction: column; /* 👈 uno debajo del otro */
-  align-items: center;    /* 👈 centrados horizontalmente */
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  gap: 24px;              /* 👈 espacio entre textos */
+  gap: 24px;
 }
 
 /* FOOTER */
@@ -125,35 +149,40 @@ footer {
   font-size: 14px;
 }
 
-/* RESPONSIVE */
+/* =======================
+   RESPONSIVE
+======================= */
 @media (max-width: 768px) {
+
+  /* Navbar móvil */
   .navbar {
-    padding: 20px;
+    padding: 20px 20px;
   }
 
-
   .navbar-container {
-  display: flex;
-  align-items: center;       /* centra verticalmente logo y links */
-  justify-content: space-between; /* separa logo y links */
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-.nav-links {
-  display: flex;
-  gap: 1.5rem;             /* espacio entre links */
-}
-
-@media (max-width: 768px) {
-  .navbar-container {
-    flex-direction: column; /* apila logo y links en móvil */
+    flex-direction: column;
     align-items: center;
   }
 
   .nav-links {
-    gap: 1rem;
-    margin-top: 0.5rem;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  /* Hero móvil */
+  .hero h2 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  /* Secciones móviles */
+  .about,
+  .menu,
+  .cta {
+    padding: 60px 20px;
   }
 }
